@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/namerafal/currency-converter-react.git/static/css/main.8fe9827a.css",
+    "main.js": "/namerafal/currency-converter-react.git/static/js/main.dddcdc09.js",
+    "static/js/787.9bcb2e4b.chunk.js": "/namerafal/currency-converter-react.git/static/js/787.9bcb2e4b.chunk.js",
+    "static/media/bacground.png": "/namerafal/currency-converter-react.git/static/media/bacground.0243e83e2a5089eeb4a7.png",
+    "index.html": "/namerafal/currency-converter-react.git/index.html",
+    "main.8fe9827a.css.map": "/namerafal/currency-converter-react.git/static/css/main.8fe9827a.css.map",
+    "main.dddcdc09.js.map": "/namerafal/currency-converter-react.git/static/js/main.dddcdc09.js.map",
+    "787.9bcb2e4b.chunk.js.map": "/namerafal/currency-converter-react.git/static/js/787.9bcb2e4b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8fe9827a.css",
+    "static/js/main.dddcdc09.js"
+  ]
+}

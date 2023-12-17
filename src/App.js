@@ -28,6 +28,11 @@ function App() {
   const onAmountChange = ({ target }) => setAmount(target.value);
   const onSelectChange = ({ target }) => setCurrency(target.value);
 
+  const resetForm = () => {
+    setAmount("");
+    setCurrency("");
+  };
+
   return (
     <Container>
       <Header title={"Przeliczanie walut na PLN"} />
@@ -38,6 +43,7 @@ function App() {
         onAmountChange={onAmountChange}
         onSelectChange={onSelectChange}
         calculateResult={calculateResult}
+        resetForm={resetForm}
       />
     </Container>
   );

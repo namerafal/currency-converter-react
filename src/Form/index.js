@@ -38,7 +38,8 @@ const Form = ({ amount, currency, onAmountChange,
               value={currency}
               onChange={onSelectChange}
             >
-              <option className="form__field--option1" value="">
+              <option className="form__field--option1" value=""
+              >
                 --Wybierz walutę--
               </option>
               {currencies.map(({ short, name }) => (
@@ -52,10 +53,20 @@ const Form = ({ amount, currency, onAmountChange,
         <p className="form__paragraphHeader">Wynik to koszt waluty w stosunku do PLN:</p>
         <p className="form__result">{result}</p>
         <div className='buttons'>
-          <button className="form__button" type="submit">
-            PRZELICZ
-          </button>
-          <button type="reset" className="form__button">WYCZYŚĆ</button>
+          <>
+            <button
+              className="form__button"
+              type="submit"
+            >
+              PRZELICZ
+            </button>
+            <button
+              onClick={resetForm}
+              className="form__button"
+            >
+              WYCZYŚĆ
+            </button>
+          </>
         </div>
         <footer className="form__footer">* pola wymagane</footer>
       </fieldset>

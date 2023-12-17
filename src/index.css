@@ -10,9 +10,5 @@ body {
   display: flex;
   justify-content: center;
   font-family: "Lato", sans-serif;
-   background-image: url("./immages/bacground.png");
-  /* background-position: center;
-  background-size: contain;
-  background-repeat: round;
-  height: 450px; */
+  background-image: url("./immages/bacground.png");
 }

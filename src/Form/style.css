@@ -84,3 +84,7 @@
 .form__button:active {
     background-color: #00b3b3;
 }
+
+.form__result {
+    font-weight: bold;
+}

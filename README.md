@@ -1,7 +1,16 @@
-# Currency converter
+# Currency converter in REACT - Rafał Olewicz
+
+This is an example of a currency calculator that converts the currency into PLN
+
+## OG Image
+![Alt text](public/Images/currency_coverter_og.png)
 
 # Page
  https://namerafal.github.io/currency-converter-react/
+
+ ## Demo:
+
+![currency converter demo](public/Images/currency%20converter%20demo.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -12,6 +12,22 @@ This is an example of a currency calculator that converts the currency into PLN
 
 ![currency converter demo](public/Images/currency%20converter%20demo.gif)
 
+
+ <br>
+
+## Technologies in the project
+
+   |     1. HTML       |     2. CSS        |   3. JavaScript   |
+   |-------------------|-------------------|-------------------|
+   |    version: 5     |   Normalize CSS   |  ES6+ Feature     |
+   |                   |   BEM             |  Arrow Functions  |
+   |                   |   FlexBox         |  Immutability Concept |
+   |                   |                   |  REACT            |
+   |                   |                   |  React Hooks      |
+   |                   |                   |  JSX              |
+
+<br>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

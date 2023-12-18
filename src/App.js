@@ -21,7 +21,6 @@ function App() {
       ? `${amount} ${selectedCurrency} = ${amountToCurrency.toFixed(2)} PLN`
       : "--Wynik--";
 
-
     setResult(formattedResult);
   };
 

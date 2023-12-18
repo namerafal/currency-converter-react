@@ -33,21 +33,30 @@ const Form = ({ amount, currency, onAmountChange,
             <span className="form__labelText">
               *Wybierz walutę:
             </span>
+
             <select
               className="form__field form__field--select"
               value={currency}
               onChange={onSelectChange}
             >
-              <option className="form__field--option1" value=""
+              <option
+                className="form__field--option1"
+                value=""
               >
                 --Wybierz walutę--
               </option>
+
               {currencies.map(({ short, name }) => (
-                <option key={short} value={short}>
+                <option
+                  key={short}
+                  value={short}
+                >
                   {name}
                 </option>
+
               ))}
             </select>
+
           </label>
         </p>
         <p className="form__paragraphHeader">Wynik to koszt waluty w stosunku do PLN:</p>

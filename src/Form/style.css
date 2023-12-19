@@ -26,10 +26,11 @@
 }
 
 .form__field {
+    font-size: 14px;
     background-color: white;
     text-align: center;
     border: 1px solid #ccc;
-    padding: 5px;
+    padding: 8px;
     width: 100%;
     max-width: 160px;
     border-radius: 5px;

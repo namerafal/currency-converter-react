@@ -1,11 +1,36 @@
+import { useState } from 'react';
 import './style.css';
-import { currencies } from '../Currencies';
-const Form = ({ amount, currency, onAmountChange,
-  onSelectChange, calculateResult, result, resetForm }) => {
+import { currencies } from './currencies';
+const Form = () => {
+  const [amount, setAmount] = useState("");
+  const [currency, setCurrency] = useState("");
+  const [result, setResult] = useState("--Wynik--");
 
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculateResult(amount, currency);
+  };
+
+  const calculateResult = (amount, selectedCurrency) => {
+    const currencyRate = currencies.find(({ short }) => short === selectedCurrency);
+
+    const amountToCurrency = currencyRate
+      ? +amount * currencyRate.rate
+      : null;
+
+    const formattedResult = currencyRate
+      ? `${amount} ${selectedCurrency} = ${amountToCurrency.toFixed(2)} PLN`
+      : "--Wynik--";
+
+    setResult(formattedResult);
+  };
+
+  const onAmountChange = ({ target }) => setAmount(target.value);
+  const onSelectChange = ({ target }) => setCurrency(target.value);
+
+  const resetForm = () => {
+    setAmount("");
+    setCurrency("");
   };
 
   return (
@@ -23,7 +48,7 @@ const Form = ({ amount, currency, onAmountChange,
               type="number"
               min="0.25"
               step="0.01"
-              placeholder="Wpisz kwotę"
+              placeholder="Wpisz kwotę waluty"
               onChange={onAmountChange}
             />
           </label>

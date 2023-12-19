@@ -10,5 +10,5 @@ body {
   display: flex;
   justify-content: center;
   font-family: "Lato", sans-serif;
-  background-image: url("./immages/bacground.png");
+  background-image: url("./images/bacground.png");
 }

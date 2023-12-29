@@ -1,7 +1,7 @@
-import './index.css';
+import '../index.css';
+import { Header } from './Header';
 import Container from './Container';
 import Form from './Form';
-import { Header } from './Header';
 
 function App() {
 
@@ -15,3 +15,4 @@ function App() {
 }
 
 export default App;
+ 

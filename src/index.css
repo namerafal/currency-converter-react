@@ -6,7 +6,7 @@ html {
   box-sizing: inherit;
 }
 
-body {
+#root {
   display: flex;
   justify-content: center;
   font-family: "Lato", sans-serif;

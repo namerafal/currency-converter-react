@@ -1,28 +1,15 @@
 import { useState } from 'react';
-import './style.css';
 import { currencies } from '../currencies';
-const Form = () => {
+import Result from './Result';
+import './style.css';
+
+const Form = ({calculateResult, result, currencyRate, setResult, setCurrencyRate}) => {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState("");
-  const [result, setResult] = useState("--Wynik--");
-
+  
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculateResult(amount, currency);
-  };
-
-  const calculateResult = (amount, selectedCurrency) => {
-    const currencyRate = currencies.find(({ short }) => short === selectedCurrency);
-
-    const amountToCurrency = currencyRate
-      ? +amount * currencyRate.rate
-      : null;
-
-    const formattedResult = currencyRate
-      ? `${amount} ${selectedCurrency} = ${amountToCurrency.toFixed(2)} PLN`
-      : "--Wynik--";
-
-    setResult(formattedResult);
   };
 
   const onAmountChange = ({ target }) => setAmount(target.value);
@@ -31,6 +18,8 @@ const Form = () => {
   const resetForm = () => {
     setAmount("");
     setCurrency("");
+    setResult({ sourceAmount: null, amountToCurrency: null, selectedCurrency: null });
+    setCurrencyRate(null);
   };
 
   return (
@@ -85,7 +74,7 @@ const Form = () => {
           </label>
         </p>
         <p className="form__paragraphHeader">Wynik to koszt waluty w stosunku do PLN:</p>
-        <p className="form__result">{result}</p>
+        <Result result={result} currencyRate={currencyRate} />
         <div className='buttons'>
           <>
             <button

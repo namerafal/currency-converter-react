@@ -1,9 +1,9 @@
 import { useState } from 'react';
+import '../index.css';
+import './App.css';
 import { Header } from './Header';
-import Container from './Container';
 import { currencies } from './currencies';
 import Form from './Form';
-import '../index.css';
 
 function App() {
   const [result, setResult] = useState({ sourceAmount: null, amountToCurrency: null, selectedCurrency: null });
@@ -22,7 +22,7 @@ function App() {
   }
 
   return (
-    <Container>
+    <div className='app'>
       <Header title={"Przeliczanie walut na PLN"} />
       <Form
         result={result}
@@ -31,7 +31,7 @@ function App() {
         setResult={setResult}
         setCurrencyRate={setCurrencyRate}
       />
-    </Container>
+    </div>
   );
 }
 

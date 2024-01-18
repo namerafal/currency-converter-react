@@ -1,6 +1,6 @@
 .header__title {
     text-decoration: underline;
     background-color: #0c929221;
-    border-radius: 5px;
     display: inline-block;
+    padding: 0px 10px;
 }

@@ -4,10 +4,10 @@ const Result = ({ result }) => {
   let content;
 
   if (!result.sourceAmount && result.selectedCurrency) {
-    content = <p>Wprowadź poprawną liczbę w polu Kwota</p>;
+    content = <p>Wprowadź poprawną liczbę w polu Kwota...!</p>;
 
   } else if (result.sourceAmount && !result.selectedCurrency) {
-    content = <p>Wybierz walutę</p>;
+    content = <p>Wybierz walutę!</p>;
 
   } else if (result.sourceAmount && result.selectedCurrency) {
     content = (

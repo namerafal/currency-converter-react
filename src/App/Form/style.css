@@ -2,7 +2,7 @@
     text-align: center;
     border: 1px solid #14a3a3;
     padding: 20px 30px;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0px 0px 15px #00000093;
     background-color: #f7f7f7;
 }
@@ -10,7 +10,7 @@
 .form__legend {
     background-color: rgb(12 146 146);
     color: #ffffff;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 5px;
     width: 200px;
 }
@@ -25,14 +25,14 @@
 }
 
 .form__field {
-    font-size: 14px;
     background-color: white;
     text-align: center;
     border: 1px solid #ccc;
     padding: 8px;
     width: 100%;
     max-width: 200px;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 4px #0000002b;
 }
 
 .form__field--select {
@@ -75,7 +75,7 @@
     background-color: #0c9292;
     color: #ffffff;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 2px 2px 5px 1px rgb(25 23 23 / 67%);
 }
 

@@ -1,0 +1,7 @@
+.form__dateTime {
+    padding-right: 15px;
+    font-family: 'Inconsolata', monospace;
+   font-size: small;
+   display: flex;
+   justify-content: flex-end;
+}

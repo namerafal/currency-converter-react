@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { currencies } from '../currencies';
+import { Fieldset, Legend, LabelText, FieldInput, SelectOption1, ParagraphHeader, Button, FormFooter } from './styled';
 import Result from './Result';
-import './style.css';
 import DateClock from './Clock';
 
-const Form = ({calculateResult, result, currencyRate, setResult, setCurrencyRate}) => {
+const Form = ({ calculateResult, result, currencyRate, setResult, setCurrencyRate }) => {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState("");
-  
+
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculateResult(amount, currency);
@@ -24,17 +24,16 @@ const Form = ({calculateResult, result, currencyRate, setResult, setCurrencyRate
   };
 
   return (
-    <form className="form" onSubmit={onFormSubmit}>
-      <fieldset className="form__fieldset">
-        <legend className="form__legend">Kalkulator walut</legend>
-        <DateClock/>
+    <form onSubmit={onFormSubmit}>
+      <Fieldset>
+        <Legend>Kalkulator walut</Legend>
+        <DateClock />
         <p>
           <label>
-            <span className="form__labelText">
+            <LabelText>
               *Kwota obcej waluty:
-            </span>
-            <input
-              className="form__field"
+            </LabelText>
+            <FieldInput
               value={amount}
               type="number"
               min="0.25"
@@ -46,21 +45,20 @@ const Form = ({calculateResult, result, currencyRate, setResult, setCurrencyRate
         </p>
         <p>
           <label>
-            <span className="form__labelText">
+            <LabelText>
               *Wybierz walutę:
-            </span>
+            </LabelText>
 
-            <select
-              className="form__field form__field--select"
+            <FieldInput as="select"
+              $select
               value={currency}
               onChange={onSelectChange}
             >
-              <option
-                className="form__field--option1"
+              <SelectOption1
                 value=""
               >
                 --Wybierz walutę--
-              </option>
+              </SelectOption1>
 
               {currencies.map(({ short, name }) => (
                 <option
@@ -71,30 +69,32 @@ const Form = ({calculateResult, result, currencyRate, setResult, setCurrencyRate
                 </option>
 
               ))}
-            </select>
+            </FieldInput>
 
           </label>
         </p>
-        <p className="form__paragraphHeader">Wynik to koszt waluty w stosunku do PLN:</p>
+        <ParagraphHeader>
+          Wynik to koszt waluty w stosunku do PLN:
+        </ParagraphHeader>
         <Result result={result} currencyRate={currencyRate} />
-        <div className='buttons'>
-          <>
-            <button
-              className="form__button"
-              type="submit"
-            >
-              PRZELICZ
-            </button>
-            <button
-              onClick={resetForm}
-              className="form__button"
-            >
-              WYCZYŚĆ
-            </button>
-          </>
-        </div>
-        <footer className="form__footer">* pola wymagane</footer>
-      </fieldset>
+
+        <>
+          <Button
+            className="form__button"
+            type="submit"
+          >
+            PRZELICZ
+          </Button>
+          <Button
+            onClick={resetForm}
+            className="form__button"
+          >
+            WYCZYŚĆ
+          </Button>
+        </>
+
+        <FormFooter className="form__footer">* pola wymagane</FormFooter>
+      </Fieldset>
     </form>
   );
 };

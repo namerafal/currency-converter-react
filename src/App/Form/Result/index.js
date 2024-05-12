@@ -1,4 +1,4 @@
-import './style.css'
+import { ResultStyle } from './styled';
 
 const Result = ({ result }) => {
   let content;
@@ -12,7 +12,7 @@ const Result = ({ result }) => {
   } else if (result.sourceAmount && result.selectedCurrency) {
     content = (
       <p>
-         {result.sourceAmount} {result.selectedCurrency} = <strong>{result.amountToCurrency.toFixed(2)} PLN</strong>
+        {result.sourceAmount} {result.selectedCurrency} = <strong>{result.amountToCurrency.toFixed(2)} PLN</strong>
       </p>
     );
 
@@ -20,7 +20,7 @@ const Result = ({ result }) => {
     content = "--Wynik--";
   }
 
-  return <div className="result">{content}</div>;
+  return <ResultStyle>{content}</ResultStyle>;
 };
 
 export default Result;

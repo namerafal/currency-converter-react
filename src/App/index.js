@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import '../index.css';
-import './App.css';
+import { AppContainer } from './styled';
 import { Header } from './Header';
 import { currencies } from './currencies';
 import Form from './Form';
@@ -22,7 +21,7 @@ function App() {
   }
 
   return (
-    <div className='app'>
+    <AppContainer>
       <Header title={"Przeliczanie walut na PLN"} />
       <Form
         result={result}
@@ -31,7 +30,7 @@ function App() {
         setResult={setResult}
         setCurrencyRate={setCurrencyRate}
       />
-    </div>
+    </AppContainer>
   );
 }
 

@@ -18,7 +18,5 @@ export const GlobalStyles = createGlobalStyle`
         font-family: "Lato", sans-serif;
         background-image: url(${background});
         background-position: center;
-        /* background-color: blue; */
-        /* background-image: "./images/bacground.png"; */
     }
 `;

@@ -41,10 +41,6 @@ export const FieldInput = styled.input`
             font-size: 15px;
        `};
 
-        ${({ option1 }) => option1 && css`
-            background-color: #f9d7d7;
-        `};
-
           &:required {
             border-color: #ccc;
           }
@@ -57,6 +53,7 @@ export const FieldInput = styled.input`
 
 export const SelectOption1 = styled.option`
    background-color: #f9d7d7;
+   color: #808080;
 `;
 
 export const ParagraphHeader = styled.p`

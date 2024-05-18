@@ -3,14 +3,14 @@
 This is an example of a currency calculator that converts the currency into PLN
 
 ## OG Image
-![Alt text](https://github.com/namerafal/currency-converter-react/blob/main/public/Images/currency_converter_og.png)
+![Alt text](https://github.com/namerafal/currency-converter-react/blob/main/Images/currency_converter_og.png)
 
 # Page
  https://namerafal.github.io/currency-converter-react/
 
  ## Demo:
 
-![currency converter demo](public/Images/currency%20converter%20demo.gif)
+![currency converter demo](Images/currency%20converter%20demo.gif)
 
 
  <br>

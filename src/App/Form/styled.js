@@ -52,7 +52,7 @@ export const SelectOption1 = styled.option`
    color: ${({ theme }) => theme.color.white};
 `;
 
-export const ParagraphHeader = styled.p`
+export const Paragraph = styled.p`
        margin: 30px 0px 5px;
 `;
 

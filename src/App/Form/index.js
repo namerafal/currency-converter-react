@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import { currencies } from '../currencies';
-import { Fieldset, Legend, LabelText, FieldInput, SelectOption1, ParagraphHeader, Button, FormFooter } from './styled';
+import { Fieldset, Legend, LabelText, FieldInput, SelectOption1, Paragraph, Button, FormFooter } from './styled';
 import Result from './Result';
 import DateClock from './Clock';
+import useCurrencyRequest from '../../useCurrencyRequest';
 
 const Form = ({ calculateResult, result, currencyRate, setResult, setCurrencyRate }) => {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState("");
+  const { rates, date } = useCurrencyRequest("");
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -60,12 +61,12 @@ const Form = ({ calculateResult, result, currencyRate, setResult, setCurrencyRat
                 --Wybierz walutę--
               </SelectOption1>
 
-              {currencies.map(({ short, name }) => (
+              {rates && Object.keys(rates).map((short) => (
                 <option
                   key={short}
                   value={short}
                 >
-                  {name}
+                  {short}
                 </option>
 
               ))}
@@ -73,27 +74,30 @@ const Form = ({ calculateResult, result, currencyRate, setResult, setCurrencyRat
 
           </label>
         </p>
-        <ParagraphHeader>
-          Wynik to koszt waluty w stosunku do PLN:
-        </ParagraphHeader>
+        <Paragraph>
+          Wynik to koszt PLN w stosunku do waluty:
+        </Paragraph>
         <Result result={result} currencyRate={currencyRate} />
 
         <>
           <Button
-            className="form__button"
             type="submit"
           >
             PRZELICZ
           </Button>
           <Button
             onClick={resetForm}
-            className="form__button"
           >
             WYCZYŚĆ
           </Button>
         </>
 
-        <FormFooter className="form__footer">* pola wymagane</FormFooter>
+        <Paragraph>
+          Kursy walut pobrane są z Europejskiego Banku Centralnego<br />
+          Aktualizacja na dzień: <strong>{date}</strong>
+        </Paragraph>
+
+        <FormFooter>* pola wymagane</FormFooter>
       </Fieldset>
     </form>
   );

@@ -79,21 +79,19 @@ const Form = ({ calculateResult, result, currencyRate, setResult, setCurrencyRat
         <Result result={result} currencyRate={currencyRate} />
 
         <>
-          <Button
-            className="form__button"
+          <Button            
             type="submit"
           >
             PRZELICZ
           </Button>
           <Button
-            onClick={resetForm}
-            className="form__button"
+            onClick={resetForm}           
           >
             WYCZYŚĆ
           </Button>
         </>
 
-        <FormFooter className="form__footer">* pola wymagane</FormFooter>
+        <FormFooter>* pola wymagane</FormFooter>
       </Fieldset>
     </form>
   );

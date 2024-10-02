@@ -1,13 +1,15 @@
 import { useState } from 'react';
-import { AppContainer } from './styled';
+import { AppContainer, LoadingField } from './styled';
+import { Legend } from './Form/styled';
 import { Header } from './Header';
 import useCurrencyRequest from '../useCurrencyRequest';
 import Form from './Form';
+import Coin from '../images/animatedCoin/coin';
 
 function App() {
   const [result, setResult] = useState({ sourceAmount: null, amountToCurrency: null, selectedCurrency: null });
   const [currencyRate, setCurrencyRate] = useState(null);
-  const { rates, loading, error } = useCurrencyRequest("");
+  const { rates, date, loading, error } = useCurrencyRequest("");
 
   const calculateResult = (amount, selectedCurrency) => {
     const currencyRate = rates[selectedCurrency]?.value;
@@ -23,20 +25,27 @@ function App() {
   return (
     <AppContainer>
       <Header title={"Przeliczanie PLN na waluty"} />
-      {loading ? (
-        <div>Loading...</div>
-      ) : error ? (
-        <div>error: {error}</div>
-      ) : (
-        <Form
-          result={result}
-          currencyRate={currencyRate}
-          calculateResult={calculateResult}
-          setResult={setResult}
-          setCurrencyRate={setCurrencyRate}
-          rates={rates}
-        />
-      )}
+      <LoadingField>
+        <Legend>Kalkulator walut</Legend>
+        {loading ? (
+          <>
+            <div>Loading...</div>
+            <Coin />
+          </>
+        ) : error ? (
+          <div>error: {error}</div>
+        ) : (
+          <Form
+            result={result}
+            currencyRate={currencyRate}
+            calculateResult={calculateResult}
+            setResult={setResult}
+            setCurrencyRate={setCurrencyRate}
+            rates={rates}
+            date={date}
+          />
+        )}
+      </LoadingField>
     </AppContainer>
   );
 }

@@ -1,13 +1,11 @@
 import { useState } from 'react';
-import { Fieldset, Legend, LabelText, FieldInput, SelectOption1, Paragraph, Button, FormFooter } from './styled';
+import { LabelText, FieldInput, SelectOption1, Paragraph, Button, FormFooter } from './styled';
 import Result from './Result';
 import DateClock from './Clock';
-import useCurrencyRequest from '../../useCurrencyRequest';
 
-const Form = ({ calculateResult, result, currencyRate, setResult, setCurrencyRate }) => {
+const Form = ({ calculateResult, date, rates, result, currencyRate, setResult, setCurrencyRate }) => {
   const [amount, setAmount] = useState("");
-  const [currency, setCurrency] = useState("");
-  const { rates, date } = useCurrencyRequest("");
+  const [currency, setCurrency] = useState(""); 
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -26,8 +24,8 @@ const Form = ({ calculateResult, result, currencyRate, setResult, setCurrencyRat
 
   return (
     <form onSubmit={onFormSubmit}>
-      <Fieldset>
-        <Legend>Kalkulator walut</Legend>
+      {/* <Fieldset>
+        <Legend>Kalkulator walut</Legend> */}
         <DateClock />
         <p>
           <label>
@@ -61,7 +59,7 @@ const Form = ({ calculateResult, result, currencyRate, setResult, setCurrencyRat
                 --Wybierz walutę--
               </SelectOption1>
 
-              {rates && Object.keys(rates).map((short) => (
+              {Object.keys(rates).map((short) => (
                 <option
                   key={short}
                   value={short}
@@ -98,7 +96,7 @@ const Form = ({ calculateResult, result, currencyRate, setResult, setCurrencyRat
         </Paragraph>
 
         <FormFooter>* pola wymagane</FormFooter>
-      </Fieldset>
+      {/* </Fieldset> */}
     </form>
   );
 };

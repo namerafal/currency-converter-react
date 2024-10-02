@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
-export const Fieldset = styled.fieldset`
-   text-align: center;
+export const Fieldset = styled.fieldset`    
+    text-align: center;
     border: 1px solid ${({ theme }) => theme.color.easternBlue};
     padding: 20px 30px;
     border-radius: 8px;

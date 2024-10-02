@@ -1,7 +1,8 @@
 .coin {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     position: relative;
+    margin-bottom: 10px;
     transform-style: preserve-3d;
     animation: spin 3s infinite linear;
   }

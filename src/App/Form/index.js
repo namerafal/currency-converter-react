@@ -23,21 +23,19 @@ const Form = ({ calculateResult, date, rates, result, currencyRate, setResult, s
   };
 
   return (
-    <form onSubmit={onFormSubmit}>
-      {/* <Fieldset>
-        <Legend>Kalkulator walut</Legend> */}
+    <form onSubmit={onFormSubmit}>      
         <DateClock />
         <p>
           <label>
             <LabelText>
-              *Kwota obcej waluty:
+              *Kwota w PLN:
             </LabelText>
             <FieldInput
               value={amount}
               type="number"
               min="0.25"
               step="0.01"
-              placeholder="Wpisz kwotę waluty"
+              placeholder="Wpisz kwotę"
               onChange={onAmountChange}
             />
           </label>
@@ -73,7 +71,7 @@ const Form = ({ calculateResult, date, rates, result, currencyRate, setResult, s
           </label>
         </p>
         <Paragraph>
-          Wynik to koszt PLN w stosunku do waluty:
+          Wynik to koszt waluty w stosunku do PLN:
         </Paragraph>
         <Result result={result} currencyRate={currencyRate} />
 

@@ -3,7 +3,7 @@ import { Header } from '../Header';
 import DateClock from './Clock';
 import { Fieldset, Legend, LabelText, FieldInput, SelectOption1, Paragraph, Button, FormFooter } from './styled';
 import Result from './Result';
-import { LoadingContent } from '../LoadingContent/LoadingContent';
+import { LoadingInfo } from '../LoadingInfo/LoadingInfo';
 import useCurrencyRequest from '../../useCurrencyRequest';
 import { ErrorContent } from '../ErrorContent/ErrorContent';
 
@@ -44,7 +44,7 @@ const Form = () => {
       <Fieldset>
         <Legend>Kalkulator walut</Legend>
         {ratesData.state === "loading" ? (
-          <LoadingContent />
+          <LoadingInfo />
         ) : (
           ratesData.state === "error" ? (
             <ErrorContent />

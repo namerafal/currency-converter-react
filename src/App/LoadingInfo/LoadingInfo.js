@@ -2,7 +2,7 @@ import Coin from "../../images/animatedCoin/coin";
 import { LoadingField } from "./loadingStyle";
 
 
-export const LoadingContent = () => {
+export const LoadingInfo = () => {
     return (
         <LoadingField>
              <Coin />

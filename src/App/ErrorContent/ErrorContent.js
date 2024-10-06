@@ -7,7 +7,7 @@ export const ErrorContent = () => {
             🥺 Coś poszło nie tak.
             <ContentSolution>
                 <li>
-                    🧐 sprawdź czy masz połaczenie z internetem
+                    🧐 sprawdź czy masz połączenie z internetem
                 </li>
                 <li>
                     ☕ za chwilkę spróbuj raz jeszcze...

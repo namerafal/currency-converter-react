@@ -1,9 +1,9 @@
-import { useState } from 'react';
 import { AppContainer, LoadingField } from './styledApp';
+import Form from './Form';
+import { useState } from 'react';
 import { Legend } from './Form/styled';
 import { Header } from './Header';
 import useCurrencyRequest from '../useCurrencyRequest';
-import Form from './Form';
 import Coin from '../images/animatedCoin/coin';
 
 function App() {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AppContainer, LoadingField } from './styled';
+import { AppContainer, LoadingField } from './styledApp';
 import { Legend } from './Form/styled';
 import { Header } from './Header';
 import useCurrencyRequest from '../useCurrencyRequest';

@@ -3,7 +3,9 @@ import { Header } from '../Header';
 import DateClock from './Clock';
 import { Fieldset, Legend, LabelText, FieldInput, SelectOption1, Paragraph, Button, FormFooter } from './styled';
 import Result from './Result';
+import { LoadingContent } from '../LoadingContent/LoadingContent';
 import useCurrencyRequest from '../../useCurrencyRequest';
+import { ErrorContent } from '../ErrorContent/ErrorContent';
 
 const Form = () => {
   const [currency, setCurrency] = useState("");

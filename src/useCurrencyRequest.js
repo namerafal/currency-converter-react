@@ -32,7 +32,7 @@ const useCurrencyRequest = () => {
 
   }, []);
 
-  return { rates, date, loading, error };
+  return ratesData;
 };
 
 export default useCurrencyRequest;

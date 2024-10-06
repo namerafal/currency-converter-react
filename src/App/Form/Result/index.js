@@ -12,7 +12,7 @@ const Result = ({ result }) => {
   } else if (result.sourceAmount && result.selectedCurrency) {
     content = (
       <p>
-        {result.sourceAmount} {result.selectedCurrency} = <strong>{result.amountToCurrency.toFixed(2)} PLN</strong>
+        {result.sourceAmount} PLN = <strong> {result.amountToCurrency.toFixed(2)} {result.selectedCurrency} </strong>
       </p>
     );
 

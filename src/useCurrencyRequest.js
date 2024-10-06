@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { CURRENCY_API } from './URL/currencyAPI';
 
 const useCurrencyRequest = () => {
   const [ratesData, setRatesData] = useState({
@@ -10,9 +11,7 @@ const useCurrencyRequest = () => {
   useEffect(() => {
     const fetchRates = async () => {
       try {
-
-        const response = await axios.get('currencies.json');
-        // const response = await axios.get('https://api.currencyapi.com/v3/latest?apikey=cur_live_FVxTKQHW27c4Yi5Ksu20Ymx7ihSW6YKRrdg11jmS&currencies=EUR%2CUSD%2CCAD%2CGBP&base_currency=PLN');
+        const response = await axios.get(CURRENCY_API);        
 
         const { meta, data } = response.data;
         setRatesData({

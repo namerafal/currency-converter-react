@@ -1,6 +1,7 @@
 # Currency converter in REACT - Rafał Olewicz
 
 This is an example of a currency calculator that converts the currency into PLN
+Currency rates are taken from an open API
 
 ## OG Image
 ![Alt text](https://github.com/namerafal/currency-converter-react/blob/main/public/images/currency%20converter_og.png)
@@ -17,14 +18,16 @@ This is an example of a currency calculator that converts the currency into PLN
 
 ## Technologies in the project
 
-   |     1. HTML       |     2. CSS        |   3. JavaScript   |
-   |-------------------|-------------------|-------------------|
-   |    version: 5     |   Normalize CSS   |  ES6+ Feature     |
-   |                   |   BEM             |  Arrow Functions  |
-   |                   |   FlexBox         |  Immutability Concept |
-   |                   |                   |  REACT            |
-   |                   |                   |  React Hooks      |
-   |                   |                   |  JSX              |
+   |     1. HTML       |     2. CSS             |   3. JavaScript      |
+   |-------------------|------------------------|----------------------|
+   |    version: 5     | Normalize CSS          |  ES6+ Feature        |
+   |                   | BEM                    |  Arrow Functions     |
+   |                   | FlexBox                |  Immutability Concept |
+   |                   | Styled components in JS|  REACT               |
+   |                   |                        |  React Hooks         |
+   |                   |                        |  Custom Hooks        |
+   |                   |                        |  JSX                 |
+   |                   |                        |  AXIOS               |
 
 <br>
 

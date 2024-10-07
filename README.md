@@ -1,6 +1,6 @@
 # Currency converter in REACT - Rafał Olewicz
 
-This is an example of a currency calculator that converts the currency into PLN
+This is an example of a currency calculator that converts the currency into PLN.\
 Currency rates are taken from an open API
 
 ## OG Image

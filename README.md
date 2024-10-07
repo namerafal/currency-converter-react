@@ -10,7 +10,7 @@ This is an example of a currency calculator that converts the currency into PLN
 
  ## Demo:
 
-![currency converter demo](images/currency%20converter%20demo.gif)
+![currency converter demo](images/currency_converter_demo.gif)
 
 
  <br>
